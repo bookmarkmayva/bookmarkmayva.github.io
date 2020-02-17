@@ -41,7 +41,7 @@ img {
 
 .card {
   /* Add shadows to create the "card" effect */
-  box-shadow: 0 4px 8px 0 rgba(150, 148, 148, 0.2);
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
   border-radius: 5px; /* 5px rounded corners */
 }
@@ -99,12 +99,12 @@ font-size: medium;
   </div>
 </nav>
 
-<div class=" w3-hide-large" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
 
 <div class="w3-main" style="margin-left:250px;">
 
-<div id="myTop" style="display:scroll;position:fixed;bottom:5px;right:5px;">
-  <p><img src="https://i1.wp.com/78.media.tumblr.com/8bf451004305c59fb47ac541abe6ae54/tumblr_inline_mly9tsYFJh1qz4rgp.gif" onclick="w3_open()">
+<div id="myTop" class="w3-container w3-theme w3-card-4 w3-animate-opacity" style="display:scroll;position:fixed;bottom:5px;right:5px;">
+  <p><i class="fa fa-bars w3-button w3-teal w3-hide-large w3-xlarge" onclick="w3_open()"></i>
   </p>
 </div>
 
@@ -214,7 +214,7 @@ function w3_close() {
 window.onscroll = function() {myFunction()};
 function myFunction() {
   if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-   
+    document.getElementById("myTop").classList.add("w3-card-4", "w3-animate-opacity");
     document.getElementById("myIntro").classList.add("w3-show-inline-block");
   } else {
     document.getElementById("myIntro").classList.remove("w3-show-inline-block");
