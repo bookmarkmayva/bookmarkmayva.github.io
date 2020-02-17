@@ -1,160 +1,217 @@
-﻿<!DOCTYPE html>
-<html>
-<title>W3.CSS</title>
+<!DOCTYPE html>
+<html lang="en">
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-teal.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><style>
-body {font-family: "Roboto", sans-serif}
-.w3-bar-block .w3-bar-item {
-  padding: 16px;
-  font-weight: bold;
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
+.w3-sidebar {
+  z-index: 3;
+  width: 250px;
+  top: 43px;
+  bottom: 0;
+  height: inherit;
 }
+
+/* GRID IMAGE */
+
+/* Create four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.3%;
+  padding: 10px;
+  height: auto; /* Should be removed. Only for demonstration */
+}
+
+.column img {
+  margin-top: 5px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+/* Add rounded corners to the top left and the top right corner of the image */
+img {
+  border-radius: 5px 5px 0 0;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.card {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  border-radius: 5px; /* 5px rounded corners */
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+/* Add some padding inside the card container */
+.container {
+  padding: 0.01em 16px;
+}
+
+h3 {text-align:center;
+font-family: Arial,sans-serif;
+font-weight: bold; 
+line-height: normal;
+font-size: medium;
+}
+
+/* Responsive layout - makes the four columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+
+/* END GRID IMAGE */
 </style>
 <body>
 
-<nav class="w3-sidebar w3-bar-block w3-collapse w3-animate-left w3-card" style="z-index:3;width:250px;" id="mySidebar">
-  <a class="w3-bar-item w3-button w3-border-bottom w3-large" href="#"><img src="https://www.w3schools.com/images/w3schools.png" style="width:80%;"></a>
-  <a class="w3-bar-item w3-button w3-hide-large w3-large" href="javascript:void(0)" onclick="w3_close()">Close <i class="fa fa-remove"></i></a>
-  <a class="w3-bar-item w3-button w3-teal" href="#">Home</a>
-  <a class="w3-bar-item w3-button" href="#">Link 1</a>
-  <a class="w3-bar-item w3-button" href="#">Link 2</a>
-  <a class="w3-bar-item w3-button" href="#">Link 3</a>
-  <a class="w3-bar-item w3-button" href="#">Link 4</a>
-  <a class="w3-bar-item w3-button" href="#">Link 5</a>
-  <div>
-    <a class="w3-bar-item w3-button" onclick="myAccordion('demo')" href="javascript:void(0)">Dropdown <i class="fa fa-caret-down"></i></a>
-    <div id="demo" class="w3-hide">
-      <a class="w3-bar-item w3-button" href="#">Link</a>
-      <a class="w3-bar-item w3-button" href="#">Link</a>
-      <a class="w3-bar-item w3-button" href="#">Link</a>
-    </div>
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+    <a href="#" class="w3-bar-item w3-button w3-theme-l1">Logo</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">About</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Values</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">News</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contact</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-white">Clients</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-white">Partners</a>
   </div>
+</div>
+
+<!-- Sidebar -->
+<nav class="w3-sidebar w3-bar-block w3-collapse w3-large w3-theme-l5 w3-animate-left" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-right w3-xlarge w3-padding-large w3-hover-black w3-hide-large" title="Close Menu">
+    <i class="fa fa-remove"></i>
+  </a>
+  <h4 class="w3-bar-item"><b>Menu</b></h4>
+  <a class="w3-bar-item w3-button w3-hover-black" href="#">Link</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="#">Link</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="#">Link</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="#">Link</a>
 </nav>
 
-<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
 
-<div class="w3-main" style="margin-left:250px;">
+<!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+<div class="w3-main" style="margin-left:250px">
 
-<div id="myTop" class="w3-container w3-top w3-theme w3-large">
-  <p><i class="fa fa-bars w3-button w3-teal w3-hide-large w3-xlarge" onclick="w3_open()"></i>
-  <span id="myIntro" class="w3-hide">W3.CSS: Introduction</span></p>
+  <div class="w3-row w3-padding-64">
+    <div class="w3-twothird w3-container">
+      <h1 class="w3-text-teal">Heading</h1>
+      
+      
+      
+      <div class="row">
+  <div class="column" style="background-color: white;">
+  <div class="card">
+     <img src="https://i.imgur.com/Fmf6wY1.png" style="width: 100%;" />
+  <div class="container">
+  <h3>
+Thiết Kế Trang Phục</h3>
 </div>
-
-<header class="w3-container w3-theme" style="padding:64px 32px">
-  <h1 class="w3-xxxlarge">W3.CSS</h1>
-</header>
-
-<div class="w3-container" style="padding:32px">
-
-<h2>What is W3.CSS?</h2>
-
-<p>W3.CSS is a modern CSS framework with built-in responsiveness:</p>
-
-<ul class="w3-leftbar w3-theme-border" style="list-style:none">
- <li>Smaller and faster than other CSS frameworks.</li>
- <li>Easier to learn, and easier to use than other CSS frameworks.</li>
- <li>Uses standard CSS only (No jQuery or JavaScript library).</li>
- <li>Speeds up mobile HTML apps.</li>
- <li>Provides CSS equality for all devices. PC, laptop, tablet, and mobile:</li>
-</ul>
-<br>
-<img src="img_responsive.png" style="width:100%" alt="Responsive">
-
-<hr>
-<h2>W3.CSS is Free</h2>
-<p>W3.CSS is free to use. No license is necessary.</p>
-
-<hr>
-<h2>Easy to Use</h2>
-<div class="w3-container w3-sand w3-leftbar">
-<p><i>Make it as simple as possible, but not simpler.</i><br>
-Albert Einstein</p>
 </div>
-
-<hr>
-<h2>W3.CSS Web Site Templates</h2>
-
-<p>We have created some responsive W3CSS templates for you to use.</p>
-<p>You are free to modify, save, share, use or do whatever you want with them:</p>
-
-
-<div class="w3-panel w3-light-grey w3-padding-16 w3-card">
-<h3 class="w3-center">Band Template</h3>
-<div class="w3-content" style="max-width:800px">
-<a href="tryw3css_templates_band.htm" target="_blank"  title="Band Demo"><img src="img_temp_band.jpg" style="width:98%;margin:20px 0" alt="Band Template"></a><br>
-<div class="w3-row">
-  <div class="w3-col m6">
-    <a href="tryw3css_templates_band.htm" target="_blank" class="w3-button w3-padding-large w3-dark-grey" style="width:98.5%">Demo</a>
+</div>
+<!-- 1 -->
+   <div class="column" style="background-color: white;">
+  <div class="card">
+     <img src="https://i.imgur.com/Fmf6wY1.png" style="width: 100%;" />
+  <div class="container">
+  <h3>
+Thiết Kế Trang Phục 2</h3>
+</div>
+</div>
+</div>
+<!-- 2 --> 
+   <div class="column" style="background-color: white;">
+  <div class="card">
+     <img src="https://i.imgur.com/Fmf6wY1.png" style="width: 100%;" />
+  <div class="container">
+  <h3>
+Thiết Kế Trang Phục</h3>
+</div>
+</div>
+</div>
+<!-- 3 -->  
   </div>
-  <div class="w3-col m6">
-    <a href="w3css_templates.asp" class="w3-button w3-padding-large w3-dark-grey" style="width:98.5%">More Templates »</a>
+      
+      
+      
+    </div>
+    <div class="w3-third w3-container">
+      <p class="w3-border w3-padding-large w3-padding-32 w3-center">AD</p>
+      <p class="w3-border w3-padding-large w3-padding-64 w3-center">AD</p>
+    </div>
   </div>
-</div>
-</div>
-</div>
 
-<div class="w3-container w3-padding-16 w3-card" style="background-color:#eee">
-<h3 class="w3-center">Blog Template</h3>
-<div class="w3-content" style="max-width:800px">
-<img src="img_temp_blog.jpg" style="width:98%;margin:20px 0" alt="Blog Template"><br>
-<div class="w3-row">
-  <div class="w3-col m6">
-    <a href="tryw3css_templates_blog.htm" target="_blank" class="w3-button w3-padding-large w3-dark-grey" style="width:98.5%">Demo</a>
+
+
+
+
+  <!-- Pagination -->
+  <div class="w3-center w3-padding-32">
+    <div class="w3-bar">
+      <a class="w3-button w3-black" href="#">1</a>
+      <a class="w3-button w3-hover-black" href="#">2</a>
+      <a class="w3-button w3-hover-black" href="#">3</a>
+      <a class="w3-button w3-hover-black" href="#">4</a>
+      <a class="w3-button w3-hover-black" href="#">5</a>
+      <a class="w3-button w3-hover-black" href="#">»</a>
+    </div>
   </div>
-  <div class="w3-col m6">
-    <a href="w3css_templates.asp" class="w3-button w3-padding-large w3-dark-grey" style="width:98.5%">More Templates »</a>
-  </div>
-</div>
-</div>
-</div>
 
-</div>
+  <footer id="myFooter">
+    <div class="w3-container w3-theme-l2 w3-padding-32">
+      <h4>Footer</h4>
+    </div>
 
-<footer class="w3-container w3-theme" style="padding:32px">
-  <p>Footer information goes here</p>
-</footer>
-     
+    <div class="w3-container w3-theme-l1">
+      <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+    </div>
+  </footer>
+
+<!-- END MAIN -->
 </div>
 
 <script>
-// Open and close the sidebar on medium and small screens
+// Get the Sidebar
+var mySidebar = document.getElementById("mySidebar");
+
+// Get the DIV with overlay effect
+var overlayBg = document.getElementById("myOverlay");
+
+// Toggle between showing and hiding the sidebar, and add overlay effect
 function w3_open() {
-  document.getElementById("mySidebar").style.display = "block";
-  document.getElementById("myOverlay").style.display = "block";
-}
-
-function w3_close() {
-  document.getElementById("mySidebar").style.display = "none";
-  document.getElementById("myOverlay").style.display = "none";
-}
-
-// Change style of top container on scroll
-window.onscroll = function() {myFunction()};
-function myFunction() {
-  if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-    document.getElementById("myTop").classList.add("w3-card-4", "w3-animate-opacity");
-    document.getElementById("myIntro").classList.add("w3-show-inline-block");
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+    overlayBg.style.display = "none";
   } else {
-    document.getElementById("myIntro").classList.remove("w3-show-inline-block");
-    document.getElementById("myTop").classList.remove("w3-card-4", "w3-animate-opacity");
+    mySidebar.style.display = 'block';
+    overlayBg.style.display = "block";
   }
 }
 
-// Accordions
-function myAccordion(id) {
-  var x = document.getElementById(id);
-  if (x.className.indexOf("w3-show") == -1) {
-    x.className += " w3-show";
-    x.previousElementSibling.className += " w3-theme";
-  } else { 
-    x.className = x.className.replace("w3-show", "");
-    x.previousElementSibling.className = 
-    x.previousElementSibling.className.replace(" w3-theme", "");
-  }
+// Close the sidebar with the close button
+function w3_close() {
+  mySidebar.style.display = "none";
+  overlayBg.style.display = "none";
 }
 </script>
-     
+
 </body>
-</html> 
+</html>
