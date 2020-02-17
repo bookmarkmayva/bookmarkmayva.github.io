@@ -103,8 +103,8 @@ font-size: medium;
 
 <div class="w3-main" style="margin-left:250px;">
 
-<div id="myTop" class="w3-container w3-theme w3-card-4 w3-animate-opacity" style="display:scroll;position:fixed;bottom:5px;right:5px;">
-  <p><i class="fa fa-bars w3-button w3-teal w3-hide-large w3-xlarge" onclick="w3_open()"></i>
+<div id="myTop" class="w3-container" style="display:scroll;position:fixed;bottom:5px;right:5px;">
+  <p><img src="https://66.media.tumblr.com/tumblr_lolrrsniyI1qg9aa7.png" class=" w3-button w3-hide-large w3-xlarge" onclick="w3_open()">
   </p>
 </div>
 
@@ -214,11 +214,11 @@ function w3_close() {
 window.onscroll = function() {myFunction()};
 function myFunction() {
   if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-    document.getElementById("myTop").classList.add("w3-card-4", "w3-animate-opacity");
+  
     document.getElementById("myIntro").classList.add("w3-show-inline-block");
   } else {
     document.getElementById("myIntro").classList.remove("w3-show-inline-block");
-    document.getElementById("myTop").classList.remove("w3-card-4", "w3-animate-opacity");
+   
   }
 }
 
