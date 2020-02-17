@@ -12,21 +12,6 @@ body {font-family: "Roboto", sans-serif}
   font-weight: bold;
 }
 
-/* Style buttons */
-.btn {
-  background-color: DodgerBlue; /* Blue background */
-  border: none; /* Remove borders */
-  color: white; /* White text */
-  padding: 12px 16px; /* Some padding */
-  font-size: 16px; /* Set a font size */
-  cursor: pointer; /* Mouse pointer on hover */
-}
-
-/* Darker background on mouse-over */
-.btn:hover {
-  background-color: RoyalBlue;
-}
-
 /* GRID */
 /* Create four equal columns that floats next to each other */
 .column {
@@ -78,7 +63,6 @@ line-height: normal;
 font-size: medium;
 }
 
-
 /* Responsive layout - makes the four columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
   .column {
@@ -119,8 +103,8 @@ font-size: medium;
 
 <div class="w3-main" style="margin-left:250px;">
 
-<div id="myTop" class="w3-container " style="display:scroll;position:fixed;bottom:5px;right:5px;">
-  <p><button class="btn"><i class="fa fa-folder" onclick="w3_open()"></i></button>
+<div id="myTop" class="w3-container w3-theme w3-card-4 w3-animate-opacity" style="display:scroll;position:fixed;bottom:5px;right:5px;">
+  <p><i class="fa fa-bars w3-button w3-teal w3-hide-large w3-xlarge" onclick="w3_open()"></i>
   </p>
 </div>
 
