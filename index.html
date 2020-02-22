@@ -30,20 +30,11 @@ body {font-family: "Roboto", sans-serif}
 }
 
 /* GRID */
-/* Create four equal columns that floats next to each other */
-.column {
-  float: left;
-  width: 25%;
-  padding: 9px;
-  height: auto; /* Should be removed. Only for demonstration */
-}
-
-.column img {
-  vertical-align: middle;
-  width: 100%;
-}
-.column img:hover {
-    opacity: 0.8;
+.grid-card {
+ 	padding:9px;
+	 float: left;
+ 	 width: 25%;
+ 	 height: auto; /* Should be removed. Only for demonstration */
 }
 /* Add rounded corners to the top left and the top right corner of the image */
 img {
@@ -57,6 +48,14 @@ img {
   content: "";
   display: table;
   clear: both;
+}
+
+.card img {
+  vertical-align: middle;
+  width: 100%;
+}
+.card img:hover {
+    opacity: 0.8;
 }
 
 .card {
@@ -89,15 +88,21 @@ font-size: medium;
 }
 
 /* Responsive layout - makes the four columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 950px) {
+  .grid-card {
+    width: 33.33%;
+  }
+  
+/* Responsive layout - makes the four columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 768px) {
-  .column {
+  .grid-card {
     width: 50%;
   }
 
   
 /* Responsive layout - makes the four columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 450px) {
-  .column {
+  .grid-card {
     width: 100%;
   }
 
@@ -137,7 +142,7 @@ font-size: medium;
 <div class="w3-container" style="padding:18px">
 
 
- <div class="column">
+  <div class="grid-card">
   <div class="card">
      <img src="https://i.imgur.com/MfoHpJb.png" style="width:100%">
   <div class="container">
@@ -145,8 +150,8 @@ font-size: medium;
   </div>
   </div>
   </div>
-<!-- 1 -->
-  <div class="column">
+<!-- CARD -->
+  <div class="grid-card">
   <div class="card">
      <img src="https://i.imgur.com/MfoHpJb.png" style="width:100%">
   <div class="container">
@@ -154,8 +159,8 @@ font-size: medium;
   </div>
   </div>
   </div>
-<!-- 1 -->
- <div class="column">
+<!-- CARD -->
+   <div class="grid-card">
   <div class="card">
      <img src="https://i.imgur.com/MfoHpJb.png" style="width:100%">
   <div class="container">
@@ -163,8 +168,8 @@ font-size: medium;
   </div>
   </div>
   </div>
-<!-- 1 -->
- <div class="column">
+<!-- CARD -->
+   <div class="grid-card">
   <div class="card">
      <img src="https://i.imgur.com/MfoHpJb.png" style="width:100%">
   <div class="container">
@@ -172,8 +177,8 @@ font-size: medium;
   </div>
   </div>
   </div>
-<!-- 1 -->
- <div class="column">
+<!-- CARD -->
+   <div class="grid-card">
   <div class="card">
      <img src="https://i.imgur.com/MfoHpJb.png" style="width:100%">
   <div class="container">
@@ -181,8 +186,8 @@ font-size: medium;
   </div>
   </div>
   </div>
-<!-- 1 -->
- <div class="column">
+<!-- CARD -->
+   <div class="grid-card">
   <div class="card">
      <img src="https://i.imgur.com/MfoHpJb.png" style="width:100%">
   <div class="container">
@@ -190,8 +195,8 @@ font-size: medium;
   </div>
   </div>
   </div>
-<!-- 1 -->
- <div class="column">
+<!-- CARD -->
+   <div class="grid-card">
   <div class="card">
      <img src="https://i.imgur.com/MfoHpJb.png" style="width:100%">
   <div class="container">
@@ -199,17 +204,8 @@ font-size: medium;
   </div>
   </div>
   </div>
-<!-- 1 -->
- <div class="column">
-  <div class="card">
-     <img src="https://i.imgur.com/MfoHpJb.png" style="width:100%">
-  <div class="container">
-  <h3>Thiết Kế Trang Phục</h3>
-  </div>
-  </div>
-  </div>
-<!-- 1 -->
-
+<!-- CARD -->
+  
 
 
 </div>
