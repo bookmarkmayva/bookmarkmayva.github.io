@@ -51,11 +51,10 @@ body {
 
 .column {
 	float:left;
-    padding: 20px;
 	width: 33.33%;
 	background-color:#eee;
-    text-align:center;
 }
+
 
 .row:after {
 	content:"";
