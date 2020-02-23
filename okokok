@@ -1,1 +1,105 @@
-xxxxxxxxx
+<!DOCTYPE html>
+<html lang="Vi">
+
+<head> <title>BDS</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-with,initial-scale=1">
+<meta name="author" content="">
+<meta name="description" content="">
+<meta name="keyword" content="">
+</head>
+
+<style tyoe="text/css">
+* {
+	box-sizing:border-box;
+}
+
+body {
+	margin:0;
+}
+
+/* HEADER */
+.header {
+	background-color: #eee;
+    padding: 30px;
+    text-align: center;
+}
+
+.header h1 {
+	font-size:50px;
+}
+
+/*TOPNAV*/
+.topnav {
+	background-color: black;
+    overflow: hidden;
+}
+
+.topnav a {
+	float:left;
+	display:block;
+	padding: 14px 16px;
+    color: white;
+    text-align: center;
+    text-decoration:none;
+}
+
+.topnav a:hover {
+	color:black;
+	background-color:#eee;
+}
+
+.column {
+	float:left;
+    padding: 20px;
+	width: 33.33%;
+	background-color:#eee;
+    text-align:center;
+}
+
+.row:after {
+	content:"";
+    display:table;
+    clear:both;
+}
+</style>
+
+<body>
+
+<div class="header">
+<h1>TITLE</h1>
+<p>hdjhsdjsdh</p>
+</div>
+
+<div class="topnav">
+	<a href="">Home</a>
+	<a href="">Contact</a>
+</div>
+
+<div class="row">
+
+<div class="column">
+<div class="card">
+Noi dung
+</div>
+</div>
+
+<div class="column">
+<div class="card">
+Noi dung
+</div>
+</div>
+
+<div class="column">
+<div class="card">
+Noi dung
+</div>
+</div>
+
+
+</div>
+
+
+
+</body>
+</html>
